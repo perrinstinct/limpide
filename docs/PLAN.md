@@ -20,6 +20,9 @@ Limpide est une banque fictive dont la promesse est la transparence : chaque op�
 
 ### Phase 0 : fondations (2 à 3 jours)
 
+**Statut :** code terminé, mise en ligne reportée.
+
+
 - Dépôt unique : `backend/`, `frontend/`, `infra/`, `docs/`.
 - Squelette Spring Boot avec les modules Modulith vides et un test qui vérifie leurs frontières.
 - Squelette Angular.
@@ -29,6 +32,9 @@ Limpide est une banque fictive dont la promesse est la transparence : chaque op�
 - **Terminé quand :** l'adresse publique affiche la page d'accueil en HTTPS, et chaque push sur `main` redéploie.
 
 ### Phase 1 : le grand livre (4 à 5 jours)
+
+**Statut :** terminé ([ADR-0004](adr/0004-controle-du-solde-sous-verrou.md)).
+
 
 - Tables comptes, transactions, écritures.
 - Une seule porte d'entrée, `comptabiliser(transaction)`, qui refuse toute transaction déséquilibrée ou à moins de deux écritures.
@@ -49,7 +55,7 @@ Limpide est une banque fictive dont la promesse est la transparence : chaque op�
 
 ### Phase 3 : sécurité (3 à 4 jours)
 
-- Spring Authorization Server : la page de connexion est un sélecteur de persona, avec un vrai flux OpenID Connect (ADR 4).
+- Spring Authorization Server : la page de connexion est un sélecteur de persona, avec un vrai flux OpenID Connect (ADR dédié).
 - Le jeton porte le persona et l'identifiant du bac à sable.
 - Rôles client, conseiller, superviseur ; `@PreAuthorize`.
 - Authentification forte simulée par code à usage unique.
