@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:18-alpine'
+    environment:
+      - 'POSTGRES_DB=limpide'
+      - 'POSTGRES_USER=limpide'
+      - 'POSTGRES_PASSWORD=limpide'
+    ports:
+      - '5432'

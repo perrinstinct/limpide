@@ -1,0 +1,25 @@
+/* Provisoire : la vraie identité visuelle arrive en phase 4. */
+:root {
+  --ink: #0f1b2d;
+  --ink-soft: #4a5a70;
+  --paper: #f7f9fb;
+  --line: #dfe5ec;
+  --accent: #0e7c86;
+  --ok: #1a7f37;
+  --ko: #c62828;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+}

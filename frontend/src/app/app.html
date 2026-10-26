@@ -1,0 +1,26 @@
+<p class="fictive-banner" role="note">Banque fictive : aucun argent réel. Projet de démonstration.</p>
+
+<main class="hero">
+  <p class="brand">Limpide</p>
+  <h1>La banque sans zone d'ombre.</h1>
+  <p class="pitch">
+    Chaque opération peut être ouverte : les écritures passées, les contrôles franchis, les messages
+    échangés avec les autres banques. Rien n'est caché.
+  </p>
+  <p class="soon">Ouverture prochaine.</p>
+</main>
+
+<footer class="status" [attr.data-status]="apiStatus()">
+  <span class="dot"></span>
+  @switch (apiStatus()) {
+    @case ('checking') {
+      Vérification de l'API…
+    }
+    @case ('up') {
+      API opérationnelle
+    }
+    @case ('down') {
+      API injoignable
+    }
+  }
+</footer>
